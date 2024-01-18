@@ -5,15 +5,15 @@
    dependency "arsd-official:dom" version="~>10.9.2"
  +/
 import arsd.dom : Document;
-import mind : task, file, mindMain, description, sh, writeTimestamp;
-import std.array : appender, split, join;
-import std.datetime.stopwatch : StopWatch, AutoStart;
-import std.file : write, dirEntries, SpanMode, readText, exists;
+import mind : description, file, mindMain, sh, task, writeTimestamp;
+import std.array : appender, join, split;
+import std.datetime.stopwatch : AutoStart, StopWatch;
+import std.file : SpanMode, dirEntries, exists, readText, write;
 import std.format : format;
 import std.process : environment;
-import std.regex : regex, matchFirst;
+import std.regex : matchFirst, regex;
 import std.stdio : writeln;
-import std.string :replace, rightJustify, startsWith;
+import std.string : replace, rightJustify, startsWith;
 
 enum counterRegexp = regex("counter-reset: h1 (\\d+)");
 
